@@ -632,40 +632,93 @@ const App = () => {
             </section>
 
             {/* --- Instagram Feed Section --- */}
-            <section className="py-20 px-6 bg-white border-t border-gray-100">
-                <div className="max-w-[1200px] mx-auto">
-                    <div className="text-center mb-12">
-                        <span className="text-xs font-bold tracking-[0.2em] text-[#C5A059] uppercase">Follow Our Journey</span>
-                        <h3 className="font-cormorant text-4xl lg:text-5xl text-[#1D4E4E] mt-3">@naadyogastudio.goa</h3>
-                        <p className="text-gray-500 font-inter mt-3 max-w-md mx-auto leading-relaxed">
-                            Stay connected with our latest classes, workshops, and wellness tips.
-                        </p>
-                    </div>
+            <section className="py-20 px-6 bg-[#E6EFEA] relative overflow-hidden">
+                {/* Decorative background elements */}
+                <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-[#C5A059]/[0.06] rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute top-[-15%] left-[-5%] w-[400px] h-[400px] bg-[#1D4E4E]/[0.04] rounded-full blur-[80px] pointer-events-none" />
 
-                    {/* Instagram Profile Widget */}
-                    <div className="flex justify-center">
-                        <div className="w-full max-w-[500px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                            <iframe
-                                src="https://www.instagram.com/naadyogastudio.goa/embed"
-                                className="w-full border-0"
-                                style={{ minHeight: '600px' }}
-                                loading="lazy"
-                                title="Naad Yoga Studio Instagram"
-                            ></iframe>
+                <div className="max-w-[1200px] mx-auto relative z-10">
+
+                    {/* Desktop: side-by-side layout */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                        {/* Left: Content */}
+                        <div className="text-center lg:text-left order-2 lg:order-1">
+                            <span className="text-xs font-bold tracking-[0.2em] text-[#C5A059] uppercase">Follow Our Journey</span>
+                            <h3 className="font-cormorant text-4xl lg:text-5xl text-[#1D4E4E] mt-3 leading-tight">
+                                Join Our Community on Instagram
+                            </h3>
+                            <p className="text-[#1D4E4E]/70 font-inter mt-4 leading-relaxed max-w-md mx-auto lg:mx-0">
+                                Follow us for daily inspiration, behind-the-scenes moments from our studio, class schedules, and wellness tips from our instructors.
+                            </p>
+
+                            {/* Stats row */}
+                            <div className="flex justify-center lg:justify-start gap-8 mt-8 mb-8">
+                                {[
+                                    { value: 'Daily', label: 'New Content' },
+                                    { value: 'Live', label: 'Class Updates' },
+                                    { value: 'Tips', label: '& Tutorials' }
+                                ].map((stat, idx) => (
+                                    <div key={idx} className="text-center">
+                                        <div className="font-cormorant text-2xl font-bold text-[#1D4E4E]">{stat.value}</div>
+                                        <div className="text-[10px] font-inter tracking-widest uppercase text-[#1D4E4E]/50 mt-1">{stat.label}</div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Handle + Follow CTA */}
+                            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4">
+                                <a
+                                    href="https://www.instagram.com/naadyogastudio.goa?igsh=MWw1amZ2ZGlraW1qbw%3D%3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2.5 whitespace-nowrap px-7 py-3.5 bg-[#1D4E4E] text-white rounded-full font-inter text-xs font-bold tracking-widest transition-colors duration-400 hover:bg-[#C5A059]"
+                                >
+                                    <Instagram size={18} />
+                                    FOLLOW US
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/naadyogastudio.goa?igsh=MWw1amZ2ZGlraW1qbw%3D%3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-cormorant text-xl text-[#1D4E4E] hover:text-[#C5A059] transition-colors"
+                                >
+                                    @naadyogastudio.goa
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Follow CTA */}
-                    <div className="text-center mt-12">
-                        <a
-                            href="https://www.instagram.com/naadyogastudio.goa?igsh=MWw1amZ2ZGlraW1qbw%3D%3D"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] text-white rounded-full font-inter text-xs font-bold tracking-widest hover:shadow-lg hover:shadow-[#E1306C]/30 transition-all duration-300"
-                        >
-                            <Instagram size={18} />
-                            FOLLOW US ON INSTAGRAM
-                        </a>
+                        {/* Right: Instagram Widget */}
+                        <div className="relative order-1 lg:order-2">
+                            {/* Frame decoration */}
+                            <div className="absolute -top-3 -right-3 w-full h-full rounded-2xl border-2 border-[#C5A059]/20 pointer-events-none hidden lg:block" />
+
+                            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl">
+                                {/* Top bar with branding */}
+                                <div className="bg-[#1D4E4E] px-5 py-3 flex items-center justify-between">
+                                    <div className="flex items-center gap-2">
+                                        <Instagram size={16} className="text-[#C5A059]" />
+                                        <span className="text-white/90 font-inter text-xs font-medium tracking-wider">NAAD YOGA STUDIO</span>
+                                    </div>
+                                    <a
+                                        href="https://www.instagram.com/naadyogastudio.goa?igsh=MWw1amZ2ZGlraW1qbw%3D%3D"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[#C5A059] text-[10px] font-inter font-bold tracking-widest hover:text-white transition-colors"
+                                    >
+                                        VIEW PROFILE →
+                                    </a>
+                                </div>
+
+                                {/* Iframe - taller on desktop, shorter on mobile */}
+                                <iframe
+                                    src="https://www.instagram.com/naadyogastudio.goa/embed"
+                                    className="w-full border-0 h-[450px] lg:h-[550px]"
+                                    loading="lazy"
+                                    title="Naad Yoga Studio Instagram"
+                                ></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
