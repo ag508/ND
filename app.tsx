@@ -562,7 +562,7 @@ const App = () => {
                                 <Phone className="text-[#C5A059] shrink-0" />
                                 <div>
                                     <h5 className="font-bold text-xs uppercase tracking-widest text-[#1D4E4E]">Contact</h5>
-                                    <p className="text-sm text-gray-600 mt-1">+91 99999 99999 (WhatsApp)</p>
+                                    <p className="text-sm text-gray-600 mt-1">+91 84088 36881 (WhatsApp)</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
