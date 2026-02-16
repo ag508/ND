@@ -573,6 +573,15 @@ const App = () => {
                                 </div>
                             </div>
                         </div>
+                        <a
+                            href="https://g.co/kgs/dnmgZPn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-[#1D4E4E] text-white rounded-full text-xs font-bold tracking-widest hover:bg-[#C5A059] transition-colors"
+                        >
+                            <Star size={14} />
+                            VIEW ON GOOGLE
+                        </a>
                     </div>
                 </div>
             </section>
