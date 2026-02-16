@@ -642,29 +642,17 @@ const App = () => {
                         </p>
                     </div>
 
-                    {/* Instagram Embed Grid */}
-                    <div className="flex flex-wrap justify-center gap-6">
-                        {[
-                            'https://www.instagram.com/naadyogastudio.goa/',
-                            'https://www.instagram.com/naadyogastudio.goa/',
-                            'https://www.instagram.com/naadyogastudio.goa/'
-                        ].map((url, idx) => (
-                            <blockquote
-                                key={idx}
-                                className="instagram-media"
-                                data-instgrm-captioned
-                                data-instgrm-permalink={url}
-                                data-instgrm-version="14"
-                                style={{ maxWidth: '340px', minWidth: '280px', width: '100%', background: '#FFF', border: '1px solid #e6e6e6', borderRadius: '12px', margin: '0' }}
-                            >
-                                <a href={url} target="_blank" rel="noopener noreferrer" className="block p-6 text-center">
-                                    <div className="flex items-center justify-center gap-2 text-[#1D4E4E] mb-3">
-                                        <Instagram size={20} className="text-[#C5A059]" />
-                                        <span className="font-inter text-sm font-medium">View on Instagram</span>
-                                    </div>
-                                </a>
-                            </blockquote>
-                        ))}
+                    {/* Instagram Profile Widget */}
+                    <div className="flex justify-center">
+                        <div className="w-full max-w-[500px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                            <iframe
+                                src="https://www.instagram.com/naadyogastudio.goa/embed"
+                                className="w-full border-0"
+                                style={{ minHeight: '600px' }}
+                                loading="lazy"
+                                title="Naad Yoga Studio Instagram"
+                            ></iframe>
+                        </div>
                     </div>
 
                     {/* Follow CTA */}
@@ -680,9 +668,6 @@ const App = () => {
                         </a>
                     </div>
                 </div>
-
-                {/* Instagram Embed Script - auto-renders blockquotes */}
-                <script async src="//www.instagram.com/embed.js"></script>
             </section>
 
             {/* --- Footer --- */}
