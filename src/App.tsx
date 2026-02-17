@@ -731,7 +731,7 @@ const App = () => {
                             </div>
                         </div>
                         <a
-                            href="https://g.co/kgs/dnmgZPn"
+                            href="https://www.google.com/maps/search/?api=1&query=Naad+Yog+Studio+Chimbel+Goa"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-[#1D4E4E] text-white rounded-full text-xs font-bold tracking-widest hover:bg-[#C5A059] transition-colors"
