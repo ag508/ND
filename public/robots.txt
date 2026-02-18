@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://ag508.github.io/ND/sitemap.xml
+Sitemap: https://naadyoga.in/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
