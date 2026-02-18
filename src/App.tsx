@@ -125,8 +125,6 @@ const App = () => {
         <div className="min-h-screen w-full relative bg-[#FAF7F2] text-[#1A2E2E] font-sans selection:bg-[#C5A059] selection:text-white">
             {/* --- Global Styles & Fonts --- */}
             <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
-        
         html {
           scroll-behavior: smooth;
           scroll-padding-top: 100px;
@@ -260,6 +258,7 @@ const App = () => {
 
             {/* --- Navigation Bar --- */}
             <nav
+                aria-label="Main navigation"
                 className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out px-6 lg:px-12 py-4 ${isScrolled ? 'bg-[#FAF7F2]/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
                     }`}
             >
@@ -335,6 +334,7 @@ const App = () => {
                 </button>
             </div>
 
+            <main>
             {/* --- Main Hero Section --- */}
             <header className="relative w-full min-h-screen pt-24 pb-12 lg:pt-28 flex flex-col items-center justify-center overflow-hidden hero-grain hero-dots">
                 {/* Background Gradient & Elements */}
@@ -400,7 +400,12 @@ const App = () => {
                                     <img
                                         key={idx}
                                         src={img.src}
-                                        alt={img.label}
+                                        alt={`${img.label} - Naad Yoga Studio Goa`}
+                                        width={400}
+                                        height={500}
+                                        fetchPriority={idx === 0 ? 'high' : 'low'}
+                                        loading={idx === 0 ? 'eager' : 'lazy'}
+                                        decoding={idx === 0 ? 'sync' : 'async'}
                                         className={`absolute inset-0 w-full h-full object-cover transform scale-105 transition-opacity duration-700 ease-in-out ${idx === activeHeroImage ? 'opacity-100' : 'opacity-0'}`}
                                     />
                                 ))}
@@ -478,7 +483,7 @@ const App = () => {
                             { title: "Restorative", desc: "Deep relaxation and stress release.", img: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1979&auto=format&fit=crop" }
                         ].map((cls, idx) => (
                             <div key={idx} className="group relative overflow-hidden rounded-2xl aspect-[3/4] cursor-pointer">
-                                <img src={cls.img} alt={cls.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <img src={cls.img} alt={`${cls.title} classes at Naad Yoga Studio Goa`} loading="lazy" decoding="async" width={600} height={800} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#1D4E4E] via-transparent to-transparent opacity-80" />
                                 <div className="absolute bottom-0 left-0 p-8">
                                     <h4 className="font-cormorant text-2xl text-white mb-2">{cls.title}</h4>
@@ -522,7 +527,11 @@ const App = () => {
                         <div className="w-full h-full rounded-t-full rounded-b-[200px] overflow-hidden border-2 border-[#C5A059]/30 p-2">
                             <img
                                 src="https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=2064&auto=format&fit=crop"
-                                alt="Certified Yoga Instructor"
+                                alt="Certified male and female yoga instructor at Naad Yoga Studio Goa"
+                                loading="lazy"
+                                decoding="async"
+                                width={600}
+                                height={500}
                                 className="w-full h-full object-cover rounded-t-full rounded-b-[190px]"
                             />
                         </div>
@@ -575,7 +584,11 @@ const App = () => {
                                     <div className="rounded-3xl overflow-hidden aspect-[3/4] shadow-lg">
                                         <img
                                             src="https://images.unsplash.com/photo-1625675412062-fe9a2bced591?q=80&w=2070&auto=format&fit=crop"
-                                            alt="Kids doing yoga poses"
+                                            alt="Kids yoga classes in Goa - children doing yoga poses at Naad Yoga Studio"
+                                            loading="lazy"
+                                            decoding="async"
+                                            width={500}
+                                            height={667}
                                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
@@ -594,7 +607,11 @@ const App = () => {
                                     <div className="rounded-3xl overflow-hidden aspect-[3/4] shadow-lg">
                                         <img
                                             src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop"
-                                            alt="Children practicing yoga"
+                                            alt="Children practicing yoga in Goa - kids yoga near me"
+                                            loading="lazy"
+                                            decoding="async"
+                                            width={500}
+                                            height={667}
                                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
@@ -895,6 +912,8 @@ const App = () => {
                     </div>
                 </div>
             </section>
+
+            </main>
 
             {/* --- Footer --- */}
             <footer className="bg-[#1D4E4E] text-[#FAF7F2] py-12 px-6">

@@ -1,0 +1,20 @@
+{
+  "name": "Naad Yoga Studio - Best Yoga Classes in Goa",
+  "short_name": "Naad Yoga",
+  "description": "Naad Yoga Studio offers the best yoga classes in Goa with certified male and female instructors. Hatha, Vinyasa, therapeutic yoga, sound healing, and kids yoga.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#1D4E4E",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "categories": ["health", "fitness", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

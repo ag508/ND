@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
   <link rel="canonical" href="https://naadyoga.in/" />
 
   <!-- Primary SEO Meta Tags -->
@@ -16,6 +18,7 @@
   <meta name="author" content="Naad Yoga Studio" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
   <meta name="theme-color" content="#1D4E4E" />
 
   <!-- Geo Tags for Local SEO -->
@@ -36,6 +39,7 @@
     content="https://images.unsplash.com/photo-1588286840104-8957b019727f?q=80&w=1200&auto=format&fit=crop" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Naad Yoga Studio - Yoga classes in Chimbel, Goa with certified instructors" />
   <meta property="og:locale" content="en_IN" />
   <meta property="business:contact_data:locality" content="Chimbel" />
   <meta property="business:contact_data:region" content="Goa" />
@@ -87,10 +91,27 @@
           "closes": "21:00"
         }
       ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Naad+Yog+Studio+Chimbel+Goa",
       "sameAs": [
         "https://www.instagram.com/naadyogastudio.goa",
-        "https://g.co/kgs/dnmgZPn"
+        "https://g.co/kgs/dnmgZPn",
+        "https://naadyoga.in/"
       ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wa.me/918408836881?text=Hi!%20I%20want%20to%20book%20a%20yoga%20session",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Yoga Session Booking"
+        }
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Yoga Classes",
@@ -165,6 +186,21 @@
           "containedInPlace": { "@type": "State", "name": "Goa" }
         },
         {
+          "@type": "City",
+          "name": "Velha",
+          "containedInPlace": { "@type": "State", "name": "Goa" }
+        },
+        {
+          "@type": "City",
+          "name": "Mapusa",
+          "containedInPlace": { "@type": "State", "name": "Goa" }
+        },
+        {
+          "@type": "City",
+          "name": "Margao",
+          "containedInPlace": { "@type": "State", "name": "Goa" }
+        },
+        {
           "@type": "State",
           "name": "Goa",
           "containedInPlace": { "@type": "Country", "name": "India" }
@@ -175,7 +211,27 @@
         "ratingValue": "5",
         "reviewCount": "50",
         "bestRating": "5"
-      }
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Priya S." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "An amazing experience! The sound healing session was very relaxing and effective. The studio vibe is peaceful and perfect for meditation."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Rahul M." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Sir is very experienced and explains everything very nicely. One of the best places for yoga practice in Goa. Highly recommended!"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Sarah J." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "A hidden gem in Chimbel. The personalized attention to posture and breathwork has truly transformed my daily routine."
+        }
+      ]
     }
   </script>
 
@@ -232,6 +288,22 @@
             "@type": "Answer",
             "text": "Yes, we have both certified male and female yoga instructors available. Our male instructors specialize in Vinyasa flow, advanced pranayama, and sound healing (Naad Yoga). Both are available for studio and home sessions."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Asana practice at Naad Yoga Studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our Asana practice focuses on traditional yoga postures emphasizing proper alignment, strength, and flexibility. Classes cover classical poses from beginner to advanced levels, helping practitioners build a strong physical foundation for their yoga journey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book a yoga session at Naad Yoga Studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can easily book a yoga session by contacting us on WhatsApp at +91 84088 36881. Simply message us with your preferred class type, date, and time, and we will confirm your booking. Visit naadyoga.in for more details."
+          }
         }
       ]
     }
@@ -253,23 +325,81 @@
     }
   </script>
 
-  <!-- Preconnect for performance -->
+  <!-- Structured Data: WebSite for sitelinks search box -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Naad Yoga Studio",
+      "url": "https://naadyoga.in/",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wa.me/918408836881?text=Hi!%20I%20want%20to%20book%20a%20yoga%20session"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Yoga Session Booking"
+        }
+      }
+    }
+  </script>
+
+  <!-- Performance: Preconnect to critical origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="dns-prefetch" href="https://maps.google.com" />
+  <link rel="dns-prefetch" href="https://www.instagram.com" />
+
+  <!-- Performance: Load Google Fonts via link (not @import) with font-display swap -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" />
+  </noscript>
+
+  <!-- Performance: Preload LCP hero image -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1588286840104-8957b019727f?q=80&w=2070&auto=format&fit=crop" fetchpriority="high" />
+
+  <!-- Additional SEO: hreflang, mobile web app, language -->
+  <link rel="alternate" hreflang="en-IN" href="https://naadyoga.in/" />
+  <link rel="alternate" hreflang="en" href="https://naadyoga.in/" />
+  <meta name="application-name" content="Naad Yoga Studio" />
+  <meta name="apple-mobile-web-app-title" content="Naad Yoga Studio" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=yes" />
+  <meta http-equiv="content-language" content="en-IN" />
 </head>
 
 <body>
-  <!-- Semantic hidden content for SEO crawlers (not visible, helps indexing) -->
+  <!-- Semantic hidden content for SEO crawlers and no-JS fallback -->
   <noscript>
     <h1>Naad Yoga Studio – Best Yoga Classes in Goa</h1>
+    <h2>Certified Male &amp; Female Yoga Instructors in Chimbel, Goa</h2>
     <p>Naad Yoga Studio offers the best yoga classes in Chimbel, Goa. Our certified male and female yoga instructors
-      specialize
-      in Hatha Yoga, Vinyasa Flow, Therapeutic Yoga, and Sound Healing. We also provide kids yoga classes for ages 4-12
-      and personal home yoga training across Goa
-      including Panjim, Velha, and surrounding areas. Sound healing and breathwork sessions available. Open Monday to
+      specialize in Hatha Yoga, Vinyasa Flow, Therapeutic Yoga, Asana Practice, and Sound Healing. We also provide kids yoga classes for ages 4-12
+      and personal home yoga training across Goa including Panjim, Velha, and surrounding areas. Sound healing, breathwork, and meditation sessions available. Open Monday to
       Saturday, 6 AM to 9 PM. Contact us today to book your first class!</p>
-    <p>Address: Kadamba Plateau, Velha, Chimbel, Goa 403006 | Phone: +91 84088 36881 | +91 84088 35527</p>
+    <h2>Our Yoga Services</h2>
+    <ul>
+      <li>Hatha Yoga Classes – Classic postures to align body and mind</li>
+      <li>Vinyasa Flow Yoga – Dynamic movement synchronized with breath</li>
+      <li>Asana Practice – Traditional yoga poses for strength and alignment</li>
+      <li>Sound Healing Therapy – Vibrational healing with Tibetan singing bowls</li>
+      <li>Breathwork &amp; Pranayama – Conscious breathing for wellness</li>
+      <li>Kids Yoga Classes – Fun yoga for children ages 4-12</li>
+      <li>Home Yoga Sessions – Personal yoga training at your doorstep in Goa</li>
+    </ul>
+    <p>Address: Kadamba Plateau, Velha, Chimbel, Goa 403006 | Phone: +91 84088 36881 | +91 84088 35527 | Email: naadyogastudio@gmail.com</p>
+    <p>Visit us: <a href="https://naadyoga.in/">https://naadyoga.in/</a> | Follow us on Instagram: <a href="https://www.instagram.com/naadyogastudio.goa">@naadyogastudio.goa</a></p>
   </noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
