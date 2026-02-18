@@ -1,5 +1,5 @@
 import { useState, useEffect, type FormEvent } from 'react';
-import { Menu, X, Star, MapPin, Clock, Instagram, ArrowRight, Music, Wind, Sun, Phone, User, ChevronLeft, ChevronRight, ChevronUp, Heart, Smile, Sparkles } from 'lucide-react';
+import { Menu, X, Star, MapPin, Clock, Instagram, ArrowRight, Music, Wind, Sun, Phone, User, ChevronLeft, ChevronRight, ChevronUp, Heart, Smile, Sparkles, Flower2 } from 'lucide-react';
 
 // Custom WhatsApp icon using the official logo SVG
 const WhatsAppIcon = ({ size = 24, className = '' }: { size?: number; className?: string }) => (
@@ -43,6 +43,11 @@ const App = () => {
             src: "https://images.unsplash.com/photo-1588286840104-8957b019727f?q=80&w=2070&auto=format&fit=crop", // Yoga Practice
             label: "Yoga Practice",
             desc: "Rooted in tradition"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?q=80&w=2070&auto=format&fit=crop", // Asana - woman in yoga pose
+            label: "Asana",
+            desc: "Strength & Alignment"
         },
         {
             src: "https://images.unsplash.com/photo-1602192509154-0b900ee1f851?q=80&w=2069&auto=format&fit=crop", // Sound Healing Ceremony
@@ -235,6 +240,7 @@ const App = () => {
                                         <Music size={16} className="text-[#C5A059] mr-3" />
                                         <select className="w-full bg-transparent outline-none font-inter text-sm">
                                             <option>Yoga Practice (Group)</option>
+                                            <option>Asana Practice</option>
                                             <option>Sound Healing (Private)</option>
                                             <option>Breathwork Session</option>
                                             <option>Kids Yoga</option>
@@ -416,11 +422,12 @@ const App = () => {
                     </div>
 
                     {/* Interactive Pillars */}
-                    <div className="lg:col-span-4 flex flex-row lg:flex-col justify-center items-center lg:items-end gap-4 lg:gap-6 order-2 lg:order-3 w-full px-2 lg:px-0">
+                    <div className="lg:col-span-4 flex flex-row lg:flex-col justify-center items-center lg:items-end gap-2 sm:gap-4 lg:gap-5 order-2 lg:order-3 w-full px-1 sm:px-2 lg:px-0">
                         {[
-                            { icon: Music, label: "Sound Healing", id: 1 },
-                            { icon: Wind, label: "Breathwork", id: 2 },
-                            { icon: Sun, label: "Meditation", id: 3 }
+                            { icon: Flower2, label: "Asana", id: 1 },
+                            { icon: Music, label: "Sound Healing", id: 2 },
+                            { icon: Wind, label: "Breathwork", id: 3 },
+                            { icon: Sun, label: "Meditation", id: 4 }
                         ].map((item, index) => (
                             <div
                                 key={index}
@@ -428,14 +435,14 @@ const App = () => {
                                 onMouseEnter={() => setActiveHeroImage(item.id)}
                                 onMouseLeave={() => setActiveHeroImage(0)}
                                 className={`group cursor-pointer transition-all duration-500 ease-in-out
-                                    flex flex-col lg:flex-row items-center lg:justify-end gap-1.5 lg:gap-4
+                                    flex flex-col lg:flex-row items-center lg:justify-end gap-1 sm:gap-1.5 lg:gap-4
                                     flex-1 lg:flex-none lg:w-full min-w-0
-                                    py-3 px-2 lg:py-0 lg:px-0 rounded-xl lg:rounded-none
+                                    py-2.5 px-1.5 sm:py-3 sm:px-2 lg:py-0 lg:px-0 rounded-xl lg:rounded-none
                                     ${activeHeroImage === item.id ? 'bg-white/60 lg:bg-transparent lg:translate-x-[-10px]' : 'bg-transparent'}`}
                             >
                                 {/* Desktop label */}
                                 <div className="hidden lg:block text-right">
-                                    <h4 className={`font-cormorant text-2xl lg:text-3xl transition-colors duration-500 ${activeHeroImage === item.id ? 'text-[#C5A059]' : 'text-[#1D4E4E]'}`}>
+                                    <h4 className={`font-cormorant text-2xl lg:text-[1.65rem] xl:text-3xl transition-colors duration-500 ${activeHeroImage === item.id ? 'text-[#C5A059]' : 'text-[#1D4E4E]'}`}>
                                         {item.label}
                                     </h4>
                                     <p className={`text-[10px] tracking-widest uppercase transition-all duration-500 overflow-hidden ${activeHeroImage === item.id ? 'opacity-100 max-h-5 mt-1' : 'opacity-0 max-h-0 mt-0'}`}>
@@ -443,11 +450,11 @@ const App = () => {
                                     </p>
                                 </div>
                                 {/* Icon circle */}
-                                <div className={`w-11 h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center transition-all duration-500 border shrink-0 ${activeHeroImage === item.id ? 'bg-[#C5A059] text-white border-[#C5A059] scale-110' : 'bg-white/50 lg:bg-transparent text-[#1D4E4E] border-[#1D4E4E]/20'}`}>
+                                <div className={`w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center transition-all duration-500 border shrink-0 ${activeHeroImage === item.id ? 'bg-[#C5A059] text-white border-[#C5A059] scale-110' : 'bg-white/50 lg:bg-transparent text-[#1D4E4E] border-[#1D4E4E]/20'}`}>
                                     <item.icon size={18} />
                                 </div>
                                 {/* Mobile label - always visible */}
-                                <span className={`lg:hidden font-cormorant text-[13px] leading-tight text-center transition-colors duration-300 whitespace-nowrap ${activeHeroImage === item.id ? 'text-[#C5A059] font-semibold' : 'text-[#1D4E4E]/70'}`}>
+                                <span className={`lg:hidden font-cormorant text-[11px] sm:text-[13px] leading-tight text-center transition-colors duration-300 whitespace-nowrap ${activeHeroImage === item.id ? 'text-[#C5A059] font-semibold' : 'text-[#1D4E4E]/70'}`}>
                                     {item.label}
                                 </span>
                             </div>
