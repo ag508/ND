@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;600&display=swap');
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  .card {
+    width: 1200px;
+    height: 630px;
+    background: linear-gradient(135deg, #1D4E4E 0%, #0F2F2F 60%, #1D4E4E 100%);
+    display: flex;
+    position: relative;
+  }
+  /* Decorative elements */
+  .orb1 {
+    position: absolute;
+    top: -80px;
+    right: -60px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(197,160,89,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .orb2 {
+    position: absolute;
+    bottom: -100px;
+    left: -50px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(168,202,186,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(197,160,89,0.12);
+  }
+  .om-watermark {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 320px;
+    color: rgba(197,160,89,0.08);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    width: 100%;
+  }
+  .label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #C5A059;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .label::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background: #C5A059;
+  }
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #FAF7F2;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    max-width: 700px;
+  }
+  .subtitle {
+    font-size: 18px;
+    color: rgba(250,247,242,0.7);
+    line-height: 1.6;
+    max-width: 550px;
+    margin-bottom: 40px;
+  }
+  .footer-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .domain {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #C5A059;
+    letter-spacing: 0.05em;
+  }
+  .divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(250,247,242,0.2);
+  }
+  .location {
+    font-size: 13px;
+    color: rgba(250,247,242,0.5);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .pillars {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+  }
+  .pill {
+    padding: 6px 16px;
+    border: 1px solid rgba(197,160,89,0.3);
+    border-radius: 20px;
+    font-size: 11px;
+    color: rgba(250,247,242,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .gold-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #C5A059, #E8D5A3, #C5A059);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="orb1"></div>
+  <div class="orb2"></div>
+  <div class="ring"></div>
+  <div class="om-watermark">&#x0950;</div>
+  <div class="content">
+    <div class="label">Yoga Studio &bull; Chimbel, Goa</div>
+    <div class="title">Naad Yoga Studio</div>
+    <div class="subtitle">Authentic yoga with certified male &amp; female instructors. Hatha, Vinyasa, Sound Healing, Asana &amp; Kids Yoga.</div>
+    <div class="footer-row">
+      <div class="domain">naadyoga.in</div>
+      <div class="divider"></div>
+      <div class="location">Kadamba Plateau, Velha</div>
+      <div class="pillars">
+        <div class="pill">Asana</div>
+        <div class="pill">Sound Healing</div>
+        <div class="pill">Breathwork</div>
+      </div>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+</div>
+</body>
+</html>
